@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>KHOJ</title>
+        <title>Servigenics</title>
 <!--
 Moonlight Template
 https://templatemo.com/tm-512-moonlight
@@ -94,6 +94,10 @@ input[type="checkbox"]{
 .str{
 
 }
+.image{
+    padding-top: 60px !important;
+    }
+
       </style>
     </head>
 
@@ -103,10 +107,7 @@ input[type="checkbox"]{
 
         <nav>
           <div class="logo">
-              <img src="{{url_for('static',filename='img/KHOJ1.jpg')}}" width="60%" alt="">
-          </div>
-          <div class="mini-logo">
-              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
+              <img class="icon" src="{{url_for('static',filename='img/Home.jpeg')}}" width="60%" alt="">
           </div>
           <ul>
               <li><a href="#1"><i class="fa fa-home"></i> <em>Mechanic</em></a></li>
@@ -135,7 +136,7 @@ input[type="checkbox"]{
                             <div class="row">
 
                                 <div class="col-md-12">
-                                     <h3 style="color:white;">Mechanic registration</h3>
+                                     <h3 style="color:white;">Mechanic Services</h3>
                                   <fieldset>
                                     <input id="fname" name="fnameuser" type="text" class="form-control"  placeholder="Your full name..." required="">
 
@@ -166,18 +167,47 @@ input[type="checkbox"]{
                                 </div>
                                    <div class="col-md-12">
                                   <fieldset>
+                                      <label class="clr">Address</label>
                                     <textarea name="Addressuser" rows="6" class="form-control" id="Description" placeholder="Please enter detailed address"></textarea>
                                   </fieldset>
+
 
                                 </div>
 
                                 <div class="col-sm-6">
                                   <fieldset>
                                       <button type="submit" id="form-submit21" class="btn">Submit</button>
-                                      <a href="/display">Next</a>
+
 
                                   </fieldset>
                                 </div>
+
+                               <div class="col-sm-6">
+                                  <fieldset>
+                                      <button onclick="getLocation()">Try It</button>
+
+                                        <p id="demo"></p>
+
+                                        <script>
+                                        var x = document.getElementById("demo");
+
+                                        function getLocation() {
+                                          if (navigator.geolocation) {
+                                            navigator.geolocation.getCurrentPosition(showPosition);
+                                          } else {
+                                            x.innerHTML = "Geolocation is not supported by this browser.";
+                                          }
+                                        }
+
+                                        function showPosition(position) {
+                                          x.innerHTML = "Latitude: " + position.coords.latitude +
+                                          "<br>Longitude: " + position.coords.longitude;
+                                        }
+                                        </script>
+
+                                  </fieldset>
+                                </div>
+
 
 
 
@@ -185,9 +215,9 @@ input[type="checkbox"]{
                           </div>
                           </form>
                             <div class="col-sm-6">
-                                <div class="col-sm-11" style="padding-top:'10px'">
+                                <div class="col-sm-11 image" style="padding-top:'10px'">
 
-                                    <img src="{{url_for('static',filename='img/about_image.jpg')}}">
+                                    <img class="image" src="{{url_for('static',filename='img/Mechanic.jpeg')}}">
 
                                 </div>
                             </div>

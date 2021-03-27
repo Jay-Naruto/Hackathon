@@ -7,38 +7,8 @@ import smtplib
 import urllib
 import requests, time
 from tabulate import tabulate
-from docx import Document
-from docx.text.paragraph import Paragraph
-from docx.shared import Pt
-
 
 import os
-
-def get_reciept():
-        document = Document()
-        style = document.styles['Normal']
-        font = style.font
-        font.name = 'Cambria'
-        font.size = Pt(14)
-        document.add_heading('Company Name', 0)
-        document.add_heading('Receipt', 0)
-        p = document.add_paragraph('')
-        p.alignment = 0 #0: Left alignment, 1: Center, 2: Right, 3: Justified
-        p.paragraph_format.line_spacing = 1.5
-        #p.paragraph_format.size = 11#this will set the line spacing in the paragraph to 1.5 lines
-        p.add_run('\nCustomer Name: ').bold = True
-        p.add_run('Isha Nalawade')
-        p.add_run('\nService Provider: ').bold = True
-        p.add_run('Sai Services')
-        p.add_run('\n').bold = True
-        download_folder = os.path.expanduser("~")+"\Downloads\\"
-        download_folder = download_folder.replace('\\','\\\\')
-        document.save(download_folder + 'output.docx')
-
-
-
-
-
 
 app = Flask(__name__, template_folder='templates')
 
@@ -61,8 +31,9 @@ email_first = ""
 mobile = ""
 mobilem = ""
 
-def get_msg(msg,rec):
-    rec=str(rec)
+
+def get_msg(msg, rec):
+    rec = str(rec)
     url = "https://www.fast2sms.com/dev/bulk"
     payload = f"sender_id=FSTSMS&message={msg}&language=english&route=p&numbers={rec}"
     headers = {
@@ -111,10 +82,11 @@ def print0():
 
 @app.route("/login", methods=['GET', 'POST'])
 def print1():
+
     if request.method == 'POST':
         email_t = request.form.get('loginemail')
         password_t = request.form.get('loginpass')
-
+        lst2 = []
         try:
 
             isha = authe.sign_in_with_email_and_password(email_t, password_t)
@@ -126,10 +98,7 @@ def print1():
                 Mobile_s = user.val()['Mobile']
                 Password_s = user.val()['Password']
 
-            return render_template('index2.html', params=params, fullname_s=fullname_s, Email_s=Email_s,
-                                   Mobile_s=Mobile_s
-                                   )
-
+            return render_template('index2.html', params=params, fullname_s=fullname_s, Email_s=Email_s,Mobile_s=Mobile_s)
         except:
             return render_template('login.html', params=params)
 
@@ -195,7 +164,6 @@ def print5():
         print(request.form.get('MobileNouser'))
         db.child("Services").child(str(request.form.get('MobileNouser'))).set(data3)
 
-
         latr, lonr = get_lat_lon(str(request.form.get('Addressuser')))
         users_r = db.child('Mechanics').order_by_child('Email').get()
         for user in users_r.each():
@@ -203,9 +171,12 @@ def print5():
             toappend = get_distance(float(latr), float(lonr), float(user.val()["Lat"]), float(user.val()['Lon']))
 
             if toappend < 50:
-                lst.append({"Distance":toappend,"Email":user.val()['Email'],"FullName": user.val()['FullName'],
-                            "Mobile": user.val()['Mobile'],"Address": user.val()['Address'],
-                            "Shop": user.val()['Shop Name'],"Rate": toappend*10})
+                rate = toappend * 10
+                rate = "{:.2f}".format(round(rate, 2))
+                toappend = "{:.2f}".format(round(toappend, 2))
+                lst.append({"Distance": toappend, "Email": user.val()['Email'], "FullName": user.val()['FullName'],
+                            "Mobile": user.val()['Mobile'], "Address": user.val()['Address'],
+                            "Shop": user.val()['Shop Name'], "Rate": rate})
         variable = (tabulate(lst, tablefmt='html'))
         return render_template("Display.html", lst=lst)
     return render_template("Mechanic.html")
@@ -228,10 +199,10 @@ def print6():
         }
         db.child("CarParts").child(str(request.form.get('MobileNopart'))).set(data3)
 
-        msg=f"Hello! {request.form.get('fnamepart')} is in need of assistance.\nThey require:\n{request.form.get('checkpart1')}:Engines\n" \
-                f"{request.form.get('checkpart2')}:Tyres\n{request.form.get('checkpart3')}:Transmission\n" \
-                f"{request.form.get('checkpart4')}:Suspensions\n{request.form.get('checkpart5')}:Brakes\n{request.form.get('fnamepart')} has the following vehicle:{request.form.get('fnamepart')}" \
-            f"\nPlease contact the following number: {request.form.get('MobileNopart')}"
+        msg = f"Hello! {request.form.get('fnamepart')} is in need of assistance.\nThey require:\n{request.form.get('checkpart1')}:Engines\n" \
+              f"{request.form.get('checkpart2')}:Tyres\n{request.form.get('checkpart3')}:Transmission\n" \
+              f"{request.form.get('checkpart4')}:Suspensions\n{request.form.get('checkpart5')}:Brakes\n{request.form.get('fnamepart')} has the following vehicle:{request.form.get('fnamepart')}" \
+              f"\nPlease contact the following number: {request.form.get('MobileNopart')}"
 
         users = db.child('Mechanics').order_by_child('Email').get()
         # for user in users.each():
@@ -239,11 +210,8 @@ def print6():
         #       get_msg(msg,user.val()['Mobile'])
         #     except:
         #         print("Nahi jhala")
-        get_reciept()
 
     return render_template("CarParts.html")
-
-
 
 
 @app.route("/login2", methods=['GET', 'POST'])
@@ -262,8 +230,10 @@ def print7():
                 Email_m = user.val()['Email']
                 Mobile_m = user.val()['Mobile']
                 Address_m = user.val()['Address']
+                Shop_m = user.val()['Shop Name']
+
             return render_template('index3.html', params=params, data3=fullname_m, data4=Email_m, data5=Mobile_m,
-                                   data6=Address_m)
+                                   data6=Address_m, data7=Shop_m)
 
         except:
             return render_template('LoginMech.html', params=params)
@@ -313,6 +283,17 @@ def print10():
     return render_template("Display.html")
 
 
+@app.route("/index", methods=['GET', 'POST'])
+def print11():
+    if request.method == 'POST':
+        fname = request.form.get('fname')
+        email_index = request.form.get('email')
+        mobile_index = request.form.get('MobileNo')
+        Desc = request.form.get('Description')
+        msg = f"{fname} has sent a feedback\n{Desc}"
+        mail_func("Khoj.alerts@gmail.com", msg)
+        return render_template("index.html")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":

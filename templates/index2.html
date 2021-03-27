@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>KHOJ</title>
+        <title>Servigenics</title>
 <!--
 Moonlight Template
 https://templatemo.com/tm-512-moonlight
@@ -82,13 +82,21 @@ https://templatemo.com/tm-512-moonlight
         color: white !important;
         }
         body {
- background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg") !important
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png") !important
  background-color: #cccccc;
 }
 .btnalign{
  align-items: flex-end !important
  }
 
+  .homealign{
+        text-align: left !important;
+
+        }
+           .fonts{
+         font-family: Verdana, sans-serif;
+    font-size: 18px;
+    }
 
 
       </style>
@@ -100,10 +108,7 @@ https://templatemo.com/tm-512-moonlight
 
         <nav>
           <div class="logo">
-              <div>Welcome </div>
-          </div>
-          <div class="mini-logo">
-              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
+              <img class="icon" src="{{url_for('static',filename='img/Home.jpeg')}}" width="60%" alt="">
           </div>
           <ul>
               <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
@@ -121,13 +126,22 @@ https://templatemo.com/tm-512-moonlight
                 <div class="container-fluid" align="center">
 
  <div class="container col-sm-12 clr">
-                       <p class="text-white display-3" style="font-size: 50px">Car Service Company</p>
-                      <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+                       <p class="text-white display-3" style="font-size: 50px">Servigenics</p><hr>
+     <div class="homealign">
+                      <p class="fonts">Servigenics is a car service company which brings to you your nearest mechanic, in times of automobile crisis! Whether you need a mechanic or just parts for your vehicle, Servigenics is the right choice! We also provide priority services to mechanics who wish to register on our site and be shown as first priority to customers!<br>
+<br>
+To avail our services follow the steps given below:<br>
 
-Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.</p>
 
+                        1. On our home page you will come across a Login button, press it.<br>
 
-                  </div>
+                        2. If you haven't signed up as a user/ mechanic, click on the sign up link at the bottom.<br>
+
+                        3. Fill in the relevant details and login to your newly formed account.<br>
+
+                      4. Go to "Our Services" page and choose whichever service you wish to avail, purchase car parts or Consult a mechanic.<br>
+                                    </div>
+                       </div>
 
                 </div>
             </div>
@@ -151,11 +165,15 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
                                              <img  src="{{url_for('static',filename='img/pur.jpeg')}}"
                                              width="40" height="250">
                                           </a><br>
-                              <p id="demo">Car Parts</p><br><hr>
-                                     <div id="services">
-                                <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+                              <p id="demo">Vehicle Parts</p><br><hr>
+                                     <div class="clr fonts homealign" id="services">
+                                <p>We offer the following vehicle parts :<br>
 
-Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.
+                                    1. Engine<br>
+                                    2. Transmission<br>
+                                    3. Suspension<br>
+                                    4. Tyres <br>
+                                    5. Brakes<br>
                                 </p>
 
                             </div>
@@ -169,11 +187,8 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
                                        width="40" height="250">
                                     </a><br>
                               <p id="demo">Mechanic Services</p><br><hr>
-       <div id="services">
-                                <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
-
-Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.
-                                </p>
+       <div class="fonts clr homealign" id="services">
+                                <p>Hire a mechanic and also get a lift!</p>
 
                             </div>
 
@@ -197,7 +212,7 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
             <div class="content first-content">
               <div class="container-fluid">
                   <div class="col-md-3">
-                      <div class="author-image"><img src="{{url_for('static',filename='img/pur.jpeg')}}" alt="Author Image"></div>
+                      <div class="author-image"><img src="{{url_for('static',filename='img/icon.png')}}" alt="Author Image"></div>
 
                   </div>
 
@@ -207,8 +222,7 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
                           FNAME: {{ fullname_s }} <br>
                           EMAIL: {{ Email_s }} <br>
                           MOBILE: {{ Mobile_s }} <br>
-                          <a href="#">Change Password</a>
-                          <hr>
+
                         <div>
                       <a class="btn btn-primary btnalign" href="/login" role="button">Log out</a>
                         </div>

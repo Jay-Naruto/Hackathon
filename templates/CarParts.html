@@ -97,7 +97,14 @@ input[type="checkbox"]{
 
 font-size: 25px !important;
 }
+  .imageM{
+    padding-top: 60px !important;
 
+    }
+    .imageM2{
+    padding-top: 100px !important;
+
+    }
 
 </style>
     </head>
@@ -108,10 +115,7 @@ font-size: 25px !important;
 
         <nav>
           <div class="logo">
-              <img src="{{url_for('static',filename='img/KHOJ1.jpg')}}" width="60%" alt="">
-          </div>
-          <div class="mini-logo">
-              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
+              <img class="icon" src="{{url_for('static',filename='img/Home.jpeg')}}" width="60%" alt="">
           </div>
           <ul>
 
@@ -140,25 +144,25 @@ font-size: 25px !important;
                             <div class="row">
 
                                 <div class="col-md-12">
-                                     <h3 style="color:white;">Mechanic registration</h3>
+                                     <h3 style="color:white;">Purchase Vehicle Parts</h3>
                                   <fieldset>
-                                    <input id="fnamepart" name="fnamepart" type="text" class="form-control"  placeholder="Your full name..." required="">
+                                    <input id="fnamepart" name="fnamepart" type="text" class="form-control"  placeholder="Your full name..." required="" >
 
                                   </fieldset>
                                 </div>
                                  <div class="col-md-12">
                                   <fieldset>
-                                    <input name="MobileNopart" type="tel" class="form-control" id="MobileNo" placeholder="MobileNo" pattern="[0-9]{10}" required="">
+                                    <input name="MobileNopart" type="tel" class="form-control" id="MobileNo" placeholder="MobileNo" pattern="[0-9]{10}" required="" >
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <input name="Type" type="text" class="form-control" id="Type" placeholder="Vehicle type"  required="">
+                                    <input name="Type" type="text" class="form-control" id="Type" placeholder="Vehicle type" required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <input name="Vehiclename" type="text" class="form-control" id="Vehiclename" placeholder="Vehicle name"  required="">
+                                    <input name="Vehiclename" type="text" class="form-control" id="Vehiclename" placeholder="Vehicle name" required="">
                                   </fieldset>
                                 </div>
 
@@ -170,28 +174,28 @@ font-size: 25px !important;
                               <div class="col-md-12">
                                   <fieldset>
                                       <label class="clr">Engine</label>
-                          <input name="checkpart1" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" required="">
+                          <input name="checkpart1" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" >
 
                                   </fieldset>
                                 </div>
                                  <div class="col-md-12">
                                   <fieldset>
                                       <label class="clr">Tyre</label>
-                          <input name="checkpart2" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" required="">
+                          <input name="checkpart2" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" >
 
                                   </fieldset>
                                 </div>
                                  <div class="col-md-12">
                                   <fieldset>
                                       <label class="clr">Transmission</label>
-                          <input name="checkpart3" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" required="">
+                          <input name="checkpart3" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" >
 
                                   </fieldset>
                                 </div>
                                  <div class="col-md-12">
                                   <fieldset>
                                       <label class="clr">Suspensions</label>
-                          <input name="checkpart4" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" required="">
+                          <input name="checkpart4" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" >
 
                                   </fieldset>
                                 </div>
@@ -199,7 +203,7 @@ font-size: 25px !important;
                               <div class="col-md-12">
                                   <fieldset>
                                       <label class="clr">Brakes</label>
-                                    <input name="checkpart1" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" required="">
+                                    <input name="checkpart1" type="number" class="form-control" id="Lift" min="0" placeholder="0-10" >
                                   </fieldset>
                                 </div>
 
@@ -223,7 +227,14 @@ font-size: 25px !important;
                             <div class="col-sm-6">
                                 <div class="col-sm-11" style="padding-top:'10px'">
 
-                                    <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80">
+                                    <img class="imageM" src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80">
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="col-sm-11" style="padding-top:'10px'">
+
+                                    <img class="imageM2" src="{{url_for('static',filename='img/tyre.jpeg')}}">
 
                                 </div>
                             </div>

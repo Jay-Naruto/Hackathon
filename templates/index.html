@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>KHOJ</title>
+        <title>Servigenics</title>
 <!--
 Moonlight Template
 https://templatemo.com/tm-512-moonlight
@@ -43,6 +43,12 @@ https://templatemo.com/tm-512-moonlight
 }
 }
 
+ul {
+	width: 400px
+	margin-left: auto;
+	margin-right: auto;
+	}
+
 </style>
         <script>
 
@@ -77,6 +83,29 @@ https://templatemo.com/tm-512-moonlight
         .clr{
         color: white !important;
         }
+        .homealign{
+        text-align: left !important;
+
+        }
+        .icon{
+        border-radius:50% !important;
+        }
+        .fonts{
+         font-family: Verdana, sans-serif;
+    font-size: 18px;
+    }
+    .image{
+    padding-top: 60px !important;
+    }
+    .Btnlight{
+    color: #ffffff !important;
+    }
+     .iconsize{
+    padding-top: 80px !important;
+        width:300px !important;
+         height:370px !important;
+         text-align: right !important;
+        }
         </style>
     </head>
 
@@ -93,11 +122,9 @@ https://templatemo.com/tm-512-moonlight
 
         <nav>
           <div class="logo">
-              <img src="{{url_for('static',filename='img/KHOJ1.jpg')}}" width="60%" alt="">
+              <img class="icon" src="{{url_for('static',filename='img/Home_small.jpeg')}}" width="60%" alt="">
           </div>
-          <div class="mini-logo">
-              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
-          </div>
+
           <ul>
 
               <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
@@ -115,92 +142,64 @@ https://templatemo.com/tm-512-moonlight
               <div class="container-fluid">
 
                   <div class="container col-sm-12 clr">
-                       <p class="text-white display-3" style="font-size: 50px">Car Service Company</p>
-                      <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+                       <p class="text-white display-3 fonts" style="font-size: 50px">Servigenics</p><hr>
+                       <div class="homealign">
+                      <p class="fonts">Servigenics is a car service company which brings to you your nearest mechanic, in times of automobile crisis! Whether you need a mechanic or just parts for your vehicle, Servigenics is the right choice! We also provide priority services to mechanics who wish to register on our site and be shown as first priority to customers!<br>
+<br>
+To avail our services follow the steps given below:<br>
 
-Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.</p>
-                  <a class="btn btn-primary" href="/login" role="button">Login</a>
 
+                        1. On our home page you will come across a Login button, press it.<br>
+
+                        2. If you haven't signed up as a user/ mechanic, click on the sign up link at the bottom.<br>
+
+                        3. Fill in the relevant details and login to your newly formed account.<br>
+
+                      4. Go to "Our Services" page and choose whichever service you wish to avail, purchase car parts or Consult a mechanic.<br>
+                                    </div>
+
+                           <a class="btn btn-primary "  href="/login" role="button">Login</a>
                   </div>
+
 
               </div>
             </div>
           </div>
 <!-- SLIDE 2 About us-->
-          <div class="slide" id="2">
-            <div class="content fifth-content">
-               <div class="container col-sm-12 content first-content clr">
-                       <p class="text-white display-3" style="font-size: 50px">About Us</p>
-                      <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+             <div class="slide" id="2">
+          <div class="content fifth-content">
 
-Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.</p>
-            <div class="card"
-    style="border: 2px solid white; background-color:#9ca3af; color: 'white'; margin: 0 10px 10px 10px;">
-    <div class="card-header" id="headingFive" style="padding: 0">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed"
-          style=" height: 63px; width: 100%;text-decoration: none;word-wrap: break-word; white-space: normal;background-color:#81AE66; color: #FEDB4D;"
-          data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Developers
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionTeam">
-      <div class="card-body">
-        <!-- Team Section - Row 1 -->
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              <img class="myImg" src="/static/dheeraj.jpeg" alt="Dheeraj" style="width:100%">
-              <div class="container">
-                <h2>Rhutam</h2>
-              </div>
-            </div>
-          </div>
+              <div class="container-fluid">
 
-          <div class="column">
-            <div class="card">
-              <img class="myImg" src="/static/rhutam.jpeg" alt="Rhutam" style="width:100%">
-              <div class="container">
-                <h2>Sanjeevan</h2>
+                  <div class="container col-md-6 clr" style="padding-left:20px;">
+                       <p class="text-white display-3 fonts" style="font-size: 50px">About us</p><hr>
+                       <div class="homealign">
+                      <p class="fonts"><br>
+                          Our aim at Servigenics is to ensure that even if you come across an obstacle in your path, the journey to your destination should be uninterrupted.
+Staying true to our motto, we are at your service, always!
+<br>
+                    <br>Our Team:<br>
 
-              </div>
-            </div>
-          </div>
+                    1. Sanjeevan Bapat <br>
+                    2. Jay Mistry<br>
+                    3. Isha Nalawade<br>
+                    4. Rhutam Thakur <br>
+                       </div>
 
-          <div class="column">
-            <div class="card">
-              <img class="myImg" src="/static/mihika.jpeg" alt="Mihika" style="width:100%">
-              <div class="container">
-                <h2>Isha</h2>
-
-              </div>
-            </div>
-          </div>
-            <div class="column">
-            <div class="card">
-              <img class="myImg" src="/static/mihika.jpeg" alt="Mihika" style="width:100%">
-              <div class="container">
-                <h2>Jay</h2>
-
-              </div>
-            </div>
-          </div>
-
-
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-  </div>
 
                   </div>
-            </div>
+                   <div class="container col-md-6">
+                       <div class="logo">
+              <img class="iconsize" src="{{url_for('static',filename='img/Home.jpeg')}}" width="60%" alt="">
           </div>
+                        </div>
+              </div>
+            </div>
+             </div>
+
+
+
+
             <!-- Slide 3 Conatct-->
 
 
@@ -211,12 +210,13 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
 
                     <div class="col-md-12">
                         <div class="row">
+                       <form method="post" action="/index">
                           <div class="col-sm-6" >
 
                             <div class="row">
 
                                 <div class="col-md-12">
-                                     <h3 style="color:white;">Contact</h3>
+                                     <h3 style="color:white;" class="fonts ">Contact Us</h3><hr>
                                   <fieldset>
                                     <input id="fname" name="fname" type="text" class="form-control"  placeholder="Your full name..." required="">
 
@@ -241,24 +241,27 @@ Google was founded in September 1998 by Larry Page and Sergey Brin while they we
                                 </div>
                                 <div class="col-sm-6">
                                   <fieldset>
-                                    <button type="submit" id="form-submit21" class="btn">Send Feedback</button>
+                                    <input type="submit" id="form-submit21" class="btn">
                                   </fieldset>
                                 </div>
                             </div>
                           </div>
+                            </form>
                             <div class="col-sm-6">
-                                <div class="col-sm-11" style="padding-top:'10px'">
+                                <div class="col-sm-11 image" style="padding-top:'10px'">
 
-                                    <img src="{{url_for('static',filename='img/about_image.jpg')}}">
+                                    <img src="{{url_for('static',filename='img/cont.jpg')}}">
 
                                 </div>
                             </div>
 
                         </div>
+
                     </div>
                 </div>
             </div>
           </div>
+            </div>
 
 <!-- LOGIN-->
 <!--            <div class="slide" id="4">-->

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>KHOJ</title>
+        <title>Servigenics</title>
 <!--
 Moonlight Template
 https://templatemo.com/tm-512-moonlight
@@ -81,10 +81,7 @@ https://templatemo.com/tm-512-moonlight
           .clr{
         color: white !important;
         }
-        body {
- background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg") !important
- background-color: #cccccc;
-}
+
 
 
       </style>
@@ -96,10 +93,7 @@ https://templatemo.com/tm-512-moonlight
 
         <nav>
           <div class="logo">
-              <img src="{{url_for('static',filename='img/KHOJ1.jpg')}}" width="60%" alt="">
-          </div>
-          <div class="mini-logo">
-              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
+              <img class="icon" src="{{url_for('static',filename='img/Home_small.jpeg')}}" width="60%" alt="">
           </div>
           <ul>
               <li><a href="#1"><i class="fa fa-home"></i> <em>Profile</em></a></li>
@@ -110,19 +104,11 @@ https://templatemo.com/tm-512-moonlight
         </nav>
 
         <div class="slides">
-
-           <div class="slide" id="1">
-            <div class="content fifth-content">
-                <div class="container-fluid" align="center">
-
- <div class="container col-sm-12 clr">
-                       <p class="text-white display-3" style="font-size: 50px">Mechanic Profile</p>
-                 <div>
-                   <div class="slide" id="3">
+           <div class="slide" id="3">
             <div class="content first-content">
               <div class="container-fluid">
                   <div class="col-md-3">
-                      <div class="author-image"><img src="{{url_for('static',filename='img/pur.jpeg')}}" alt="Author Image"></div>
+                      <div class="author-image"><img src="{{url_for('static',filename='img/icon.png')}}" alt="Author Image"></div>
 
                   </div>
 
@@ -132,8 +118,10 @@ https://templatemo.com/tm-512-moonlight
                           FNAME: {{ data3 }} <br>
                           EMAIL: {{ data4 }} <br>
                           MOBILE: {{ data5 }} <br>
-                          MOBILE: {{ data6 }} <br>
-                          <a href="#">Change Password</a>
+                          SHOP: {{ data6 }} <br>
+                          ADDRESS: {{ data7 }} <br>
+
+
                           <hr>
                         <div>
                       <a class="btn btn-primary btnalign" href="/login" role="button">Log out</a>
@@ -144,16 +132,14 @@ https://templatemo.com/tm-512-moonlight
               </div>
             </div>
           </div>
-                 </div>
-
-                  </div>
-
-                </div>
-            </div>
-          </div>
+     </div>
 
 
-   </div>
+
+
+
+
+
 
         <div class="footer">
           <div class="content">
