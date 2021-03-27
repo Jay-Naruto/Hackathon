@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">Calculate</button>
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+    var long1 = position.coords.longitude;
+	var lat = position.coords.latitude;
+  x.innerHTML = "Latitude: " + long +
+  "<br>Longitude: " + lat;
+
+ }
+
+
+
+ function calLatLong({{lat1}},{{lon1}},lat2,lon2){
+  R = 6373.0
+   var latr = radians(lat1)
+    var lonr = radians(lon1)
+   var  laty = radians(lat2)
+   var  lony = radians(lon2)
+   var  dlon = lony - lonr
+   var  dlat = laty - latr
+   var a = sin(dlat / 2)**2 + cos(latr) * cos(laty) * sin(dlon / 2)**2
+   var c = 2 * atan2(sqrt(a), sqrt(1 - a))
+   var distance = R * c
+    return distance
+ }
+</script>
+
+</body>
+</html>
+

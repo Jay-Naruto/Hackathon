@@ -1,0 +1,282 @@
+   <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>KHOJ</title>
+<!--
+Moonlight Template
+https://templatemo.com/tm-512-moonlight
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+
+        <link rel="stylesheet" href="{{url_for('static',filename='css/fontAwesome.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/light-box.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/templatemo-main.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <script src="{{url_for('static',filename='js/cities.js')}}"></script>
+        <script src="{{url_for('static',filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+<style>
+    .marginTOP
+    {
+    margin-top:25px;
+    }
+    .marginTOP2
+    {
+    margin-top:54px;
+    }
+
+    input[type="radio"] {
+    -ms-transform: scale(0.4); /* IE 9 */
+    -webkit-transform: scale(0.4); /* Chrome, Safari, Opera */
+    transform: scale(0s.5);
+
+}
+}
+
+</style>
+        <script>
+
+
+
+         document.getElementById('dateofbirth').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+}
+
+             var down = document.getElementById('dateofbirth');
+
+        function gfg() {
+            var date =
+                document.getElementById('date').value;
+
+            var inpDate = new Date(date);
+            var currDate = new Date();
+
+            if(inpDate.setHours(0, 0, 0, 0) ==
+                      currDate.setHours(0, 0, 0, 0))
+            {
+                down.innerHTML =
+                    "The input date is today's date";
+            }
+            else {
+                down.innerHTML = "The input date is"
+                    + " different from today's date";
+            }
+        }
+
+        </script>
+      <style>
+        #demo{
+        color: white !important;
+        font-size:20px !important;
+        }
+          .clr{
+        color: white !important;
+        }
+        body {
+ background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg") !important
+ background-color: #cccccc;
+}
+.btnalign{
+ align-items: flex-end !important
+ }
+
+
+
+      </style>
+    </head>
+
+<body>
+
+
+
+        <nav>
+          <div class="logo">
+              <div>Welcome </div>
+          </div>
+          <div class="mini-logo">
+              <img src="{{url_for('static',filename='img/MINI.png')}}" alt="">
+          </div>
+          <ul>
+              <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
+            <li><a href="#2"><i class="fa fa-pencil"></i> <em>Services</em></a></li>
+              <li><a href="#3"><i class="fa fa-pencil"></i> <em>My profile</em></a></li>
+
+
+          </ul>
+        </nav>
+
+        <div class="slides">
+
+           <div class="slide" id="1">
+            <div class="content fifth-content">
+                <div class="container-fluid" align="center">
+
+ <div class="container col-sm-12 clr">
+                       <p class="text-white display-3" style="font-size: 50px">Car Service Company</p>
+                      <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+
+Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.</p>
+
+
+                  </div>
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="slide" id="2">
+
+           <div class="content fourth-content">
+                <div class="container-fluid" align="center">
+
+                     <h1 class="clr">Our Services</h1><br><hr>
+                    <div class="col-md-12 ">
+                        <div class="row">
+                          <div class="col-sm-6" >
+
+
+                                          <a href="/cp">
+                                             <img  src="{{url_for('static',filename='img/pur.jpeg')}}"
+                                             width="40" height="250">
+                                          </a><br>
+                              <p id="demo">Car Parts</p><br><hr>
+                                     <div id="services">
+                                <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+
+Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.
+                                </p>
+
+                            </div>
+                          </div>
+                            <div class="col-sm-6">
+
+
+
+                                    <a href="/mechanic">
+                                       <img src="{{url_for('static',filename='img/mech.jpeg')}}"
+                                       width="40" height="250">
+                                    </a><br>
+                              <p id="demo">Mechanic Services</p><br><hr>
+       <div id="services">
+                                <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.[10][11][12]
+
+Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998. Google was then reincorporated in Delaware on October 22, 2002.[13] An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page, who became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees.
+                                </p>
+
+                            </div>
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+            <!-- Slide 4 -->
+
+
+          <div class="slide" id="3">
+            <div class="content first-content">
+              <div class="container-fluid">
+                  <div class="col-md-3">
+                      <div class="author-image"><img src="{{url_for('static',filename='img/pur.jpeg')}}" alt="Author Image"></div>
+
+                  </div>
+
+                  <div class="col-md-9">
+                      <h2>{{ fullname_s }}</h2>
+                      <p>
+                          FNAME: {{ fullname_s }} <br>
+                          EMAIL: {{ Email_s }} <br>
+                          MOBILE: {{ Mobile_s }} <br>
+                          <a href="#">Change Password</a>
+                          <hr>
+                        <div>
+                      <a class="btn btn-primary btnalign" href="/login" role="button">Log out</a>
+                        </div>
+
+                      </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="footer">
+          <div class="content">
+
+          </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static',filename='js/vendor/jquery-1.11.2.min.js')}}"><\/script>')</script>
+
+    <script src="{{url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+
+    <script src="{{url_for('static',filename='js/datepicker.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+
+
+        // navigation click actions
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+}
+
+    </script>
+</body>
+</html>

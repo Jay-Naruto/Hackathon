@@ -1,0 +1,45 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="jsmodel" />
+            <item index="1" class="java.lang.String" itemvalue="jsname" />
+            <item index="2" class="java.lang.String" itemvalue="soy-server-key" />
+            <item index="3" class="java.lang.String" itemvalue="jsaction" />
+            <item index="4" class="java.lang.String" itemvalue="jsslot" />
+            <item index="5" class="java.lang.String" itemvalue="jscontroller" />
+            <item index="6" class="java.lang.String" itemvalue="jsshadow" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="Django" />
+            <item index="1" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="2" class="java.lang.String" itemvalue="wsgiref" />
+            <item index="3" class="java.lang.String" itemvalue="distribute" />
+            <item index="4" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="5" class="java.lang.String" itemvalue="SQLAlchemy-Defaults" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.combinations" />
+          <option value="dict.append" />
+          <option value="dict.Counter" />
+          <option value="random.random.int" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
