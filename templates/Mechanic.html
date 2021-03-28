@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -130,90 +130,116 @@ input[type="checkbox"]{
 
                     <div class="col-md-12">
                         <div class="row">
+                          <fieldset>
+                              <form id="loc">
+<!--                            <button onclick="getLocation()">Try It</button>-->
+<!--                                  <p id="idlat" name="idlat">-->
+<!--                                  <p id="idlong" name="idlong">-->
+
+                              <p id="demo"></p>
+
+                              <script>
+                              var x = document.getElementById("demo");
+
+                              function getLocation() {
+                                if (navigator.geolocation) {
+                                  navigator.geolocation.getCurrentPosition(showPosition);
+                                } else {
+                                  x.innerHTML = "Geolocation is not supported by this browser.";
+                                }
+
+                              }
+                              function showPosition(position) {
+                               var lat =position.coords.latitude
+                                var long =position.coords.longitude
+                                alert("Latitude:"+lat);
+
+                              }
+
+                             function getLocation2() {
+                                if (navigator.geolocation) {
+                                  navigator.geolocation.getCurrentPosition(showPosition2);
+                                } else {
+                                  x.innerHTML = "Geolocation is not supported by this browser.";
+                                }
+
+                              }
+                              function showPosition2(position) {
+
+                                var long =position.coords.longitude
+                                alert("Longitude:"+long);
+
+                              }
+                              </script>
+                                 </form>
+
+                        </fieldset>
                      <form method="POST">
                           <div class="col-sm-6" >
 
                             <div class="row">
 
-                                <div class="col-md-12">
-                                     <h3 style="color:white;">Mechanic Services</h3>
-                                  <fieldset>
-                                    <input id="fname" name="fnameuser" type="text" class="form-control"  placeholder="Your full name..." required="">
+                                    <div class="col-md-12">
+                                         <h3 style="color:white;">Mechanic Services</h3>
+                                      <fieldset>
+                                        <input id="fname" name="fnameuser" type="text" class="form-control"  placeholder="Your full name..." required="">
 
-                                  </fieldset>
-                                </div>
-                                 <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="MobileNouser" type="tel" class="form-control" id="MobileNo" placeholder="MobileNo" pattern="[0-9]{10}" required="">
-                                  </fieldset>
-                                </div>
+                                      </fieldset>
+                                    </div>
+                                     <div class="col-md-12">
+                                      <fieldset>
+                                        <input name="MobileNouser" type="tel" class="form-control" id="MobileNo" placeholder="MobileNo" pattern="[0-9]{10}" required="">
+                                      </fieldset>
+                                    </div>
+
+                                  <div class="col-md-12">
+                                      <fieldset>
+                                          <label class="clr">Type of vehicle?</label>
+                                        <input name="Vehicleuser" type="text" class="form-control" id="Vehicle" placeholder="Car,Truck,bike,Bus.."  required="">
+                                      </fieldset>
+                                    </div>
+
+                                  <div class="col-md-12">
+                                      <fieldset>
+                                          <label class="clr">Do you want a lift?</label>
+                                        <input name="Liftuser" type="text" class="form-control str" id="Lift" placeholder="Yes / No" required="">
+                                      </fieldset>
+                                  </div>
                                 <div class="col-md-12">
+                                      <fieldset>
+                                          <label class="clr">Destination?</label>
+                                          <textarea name="Dest" class="form-control str" id="Lift" placeholder="Destination address" required=""></textarea>
+                                      </fieldset>
+                                  </div>
+
+                                <div class="col-md-12">
+                                      <fieldset>
+                                          <button class="clr" onclick="getLocation()">Get latitude</button>
+                                        <input name="latitude" type="text" class="form-control str" id="Lift" placeholder="Latitude" required="">
+                                      </fieldset>
+                                  </div>
+                                <div class="col-md-12">
+                                      <fieldset>
+                                          <button class="clr" onclick="getLocation2()">Get longitude</button>
+                                        <input name="longitude" type="text" class="form-control str" id="Lift" placeholder="Longitude" required="">
+                                      </fieldset>
+                                  </div>
+
+
+
+
+                                    <div class="col-sm-6">
+                                      <fieldset>
+                                          <button type="submit" id="form-submit21" class="btn">Submit</button>
+
+
+                                      </fieldset>
+                                    </div>
+
 
                             </div>
-                              <div class="col-md-12">
-                                  <fieldset>
-                                      <label class="clr">Type of vehicle?</label>
-                                    <input name="Vehicleuser" type="text" class="form-control" id="Vehicle" placeholder="Car,Truck,bike,Bus.."  required="">
-                                  </fieldset>
-                                </div>
-
-                              <div class="col-md-12">
-                                  <fieldset>
-                                      <label class="clr">Do you want a lift?</label>
-                                    <input name="Liftuser" type="text" class="form-control str" id="Lift" placeholder="Yes / No" required="">
-                                  </fieldset>
-                                </div>
-
-                                </div>
-                                   <div class="col-md-12">
-                                  <fieldset>
-                                      <label class="clr">Address</label>
-                                    <textarea name="Addressuser" rows="6" class="form-control" id="Description" placeholder="Please enter detailed address"></textarea>
-                                  </fieldset>
-
-
-                                </div>
-
-                                <div class="col-sm-6">
-                                  <fieldset>
-                                      <button type="submit" id="form-submit21" class="btn">Submit</button>
-
-
-                                  </fieldset>
-                                </div>
-
-                               <div class="col-sm-6">
-                                  <fieldset>
-                                      <button onclick="getLocation()">Try It</button>
-
-                                        <p id="demo"></p>
-
-                                        <script>
-                                        var x = document.getElementById("demo");
-
-                                        function getLocation() {
-                                          if (navigator.geolocation) {
-                                            navigator.geolocation.getCurrentPosition(showPosition);
-                                          } else {
-                                            x.innerHTML = "Geolocation is not supported by this browser.";
-                                          }
-                                        }
-
-                                        function showPosition(position) {
-                                          x.innerHTML = "Latitude: " + position.coords.latitude +
-                                          "<br>Longitude: " + position.coords.longitude;
-                                        }
-                                        </script>
-
-                                  </fieldset>
-                                </div>
-
-
-
-
-
                           </div>
-                          </form>
+
                             <div class="col-sm-6">
                                 <div class="col-sm-11 image" style="padding-top:'10px'">
 
@@ -221,17 +247,9 @@ input[type="checkbox"]{
 
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
+                     </form>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
