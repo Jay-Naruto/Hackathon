@@ -6,6 +6,10 @@ from flask import Flask, render_template, request, flash
 import smtplib
 import urllib
 import requests, time
+from docx import Document
+from docx.text.paragraph import Paragraph
+from docx.shared import Pt
+import os
 
 
 import os
@@ -58,7 +62,7 @@ def get_distance(lat1, lon1, lat2, lon2):
     lony = radians(lon2)
     dlon = lony - lonr
     dlat = laty - latr
-    a2 = sin(dlat / 2) ** 2 + cos(latr) * cos(laty) * sin(dlon / 2) ** 2
+    a2 = sin(dlat / 2) * 2 + cos(latr) * cos(laty) * sin(dlon / 2) * 2
     c = 2 * atan2(sqrt(a2), sqrt(1 - a2))
     distance = R * c
     return distance
@@ -223,9 +227,45 @@ def print6():
                get_msg(msg,user.val()['Mobile'])
              except:
                  print("Error")
-        total_price = float(request.form.get('checkpart1'))*70000+ float(request.form.get('checkpart2'))*3000 +float(request.form.get('checkpart3'))*50000 +float(request.form.get('checkpart4'))*35000 +float(request.form.get('checkpart5'))*10000
+        total_price = float(request.form.get('checkpart1')) * 70000 + float(
+            request.form.get('checkpart2')) * 3000 + float(request.form.get('checkpart3')) * 50000 + float(
+            request.form.get('checkpart4')) * 35000 + float(request.form.get('checkpart5')) * 10000
 
-
+        document = Document()
+        style = document.styles['Normal']
+        font = style.font
+        font.name = 'Cambria'
+        font.size = Pt(14)
+        document.add_heading('Company Name', 0)
+        document.add_heading('Receipt', 0)
+        p = document.add_paragraph('')
+        p.alignment = 0  # 0: Left alignment, 1: Center, 2: Right, 3: Justified
+        p.paragraph_format.line_spacing = 1.5
+        # p.paragraph_format.size = 11#this will set the line spacing in the paragraph to 1.5 lines
+        p.add_run('\nServigenics: ').bold = True
+        p.add_run(request.form.get('fnamepart'))
+        p.add_run('\n').bold = True
+        p.add_run('Products:         Price                Qty').bold = True
+        p.add_run('\n---------------------------------------------------------------- ').bold = True
+        p.add_run('\n').bold = True
+        p.add_run('Engines:-         70000              ' + str(request.form.get('checkpart1')))
+        p.add_run('\n').bold = True
+        p.add_run('Tyres:-           3000               ' + str(request.form.get('checkpart2')))
+        p.add_run('\n').bold = True
+        p.add_run('Transmissions:-   50000              ' + str(request.form.get('checkpart3')))
+        p.add_run('\n').bold = True
+        p.add_run('Suspensions:-     35000              ' + str(request.form.get('checkpart4')))
+        p.add_run('\n').bold = True
+        p.add_run('Brakes:-          10000              ' + str(request.form.get('checkpart5')))
+        p.add_run('\n').bold = True
+        p.add_run('\n---------------------------------------------------------------- ').bold = True
+        p.add_run('\nTotal Price is-').bold = True
+        p.add_run('\n').bold = True
+        p.add_run(str(total_price)).bold = True
+        p.add_run('\n---------------------------------------------------------------- ').bold = True
+        download_folder = os.path.expanduser("~") + "\Downloads\\"
+        download_folder = download_folder.replace('\\', '\\\\')
+        document.save(download_folder + 'output.docx')
     return render_template("CarParts.html")
 
 
